@@ -1,0 +1,20 @@
+name: "PROD DEPLOY"
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  terraform:
+    uses: ./.github/workflows/terraform.yml
+    with:
+      environment: prod
+      aws-assume-role-arn: "arn:aws:iam::447356678672:role/github-actions-BrendoTrindade-pipeline" 
+      aws-region: "us-east-1"
+      aws-statefile-s3-bucket: "brendotrindade-us-east-1-terraform-github"
+      aws-lock-dynamodb-table: "BrendoTrindade-us-east-1-terraform-github-actions"
