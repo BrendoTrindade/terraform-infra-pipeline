@@ -14,7 +14,7 @@ jobs:
     uses: ./.github/workflows/terraform.yml
     with:
       environment: dev
-      aws-assume-role-arn: "arn:aws:iam::{{ arn:aws:iam::447356678672:role/github-actions-BrendoTrindade-pipeline }}:role/{{ github-actions-BrendoTrindade-pipeline }}"
+      aws-assume-role-arn: "arn:aws:iam::447356678672:role/github-actions-BrendoTrindade-pipeline" 
       aws-region: "us-east-1"
-      aws-statefile-s3-bucket: "{{ brendotrindade-us-east-1-terraform-github }}"
-      aws-lock-dynamodb-table: "{{ BrendoTrindade-us-east-1-terraform-github-actions }}"
+      aws-statefile-s3-bucket: "brendotrindade-us-east-1-terraform-github"
+      aws-lock-dynamodb-table: "BrendoTrindade-us-east-1-terraform-github-actions"
