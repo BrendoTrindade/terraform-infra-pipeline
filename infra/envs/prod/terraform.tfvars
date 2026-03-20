@@ -1,1 +1,1 @@
-bucker_name="prod-us-east-1-buildrun-video-pipeline-proj2"
+bucket_name="prod-us-east-1-buildrun-video-pipeline-proj2"
